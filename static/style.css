@@ -1,0 +1,76 @@
+* {
+	font-family: 'Oswald', sans-serif;
+	background-color: #ccc000;
+	color:#000;
+}
+
+.container {
+	margin:0px auto; width:400px; text-align:center;
+}
+
+.caption {
+	font-size:30px;
+}
+
+.duration {
+	width:100%;
+}
+
+.duration td {
+	text-align:center;
+	width:33%;
+}
+
+.duration input {
+	text-align:center;
+	border:0px;
+	background-color:#fff;
+	font-size:40px;
+	padding:10px 20px;
+}
+
+.sbmt {
+	margin-top:20px;
+	border:2px solid black;
+	font-size:25px;
+	background-color: #cc9000;
+	cursor:pointer;
+}
+
+.caption-json {
+	font-size:40px;
+	margin:0px !important;
+	padding:0px !important;
+}
+
+.select-style {
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #fff;
+    background: #fff url("http://www.scottgood.com/jsg/blog.nsf/images/arrowdown.gif") no-repeat 98% 50%;
+}
+
+.select-style select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+	font-size:35px;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+.select-style option {
+	text-align:center;
+}
+
+.select-style select:focus {
+    outline: none;
+}
