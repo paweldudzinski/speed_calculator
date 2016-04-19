@@ -10,12 +10,29 @@ def server_static(filename):
 def index():
     return template('index.tpl')
     
-@route('/calculate', method="POST")
-def calculate():
+@route('/calculate_run', method="POST")
+def calculate_run():
     distance = request.params.get('distance')
     hours = request.params.get('hours')
     minutes = request.params.get('minutes')
     seconds = request.params.get('seconds')
+    c = SpeedCalculator(int(distance), (int(hours), int(minutes), int(seconds)))
+    
+    pace_core = str(c.pace()).split('.')[0]
+    m, s = pace_core.split(':')[1:3]
+    
+    return json.dumps({
+        'pace': '%s:%s' % (m, s),
+        'speed': '%.2f' % (c.speed())
+    })
+    
+@route('/calculate_swim', method="POST")
+def calculate_swim():
+    distance = request.params.get('distance')
+    hours = request.params.get('hours')
+    minutes = request.params.get('minutes')
+    seconds = request.params.get('seconds')
+
     c = SpeedCalculator(int(distance), (int(hours), int(minutes), int(seconds)))
     
     pace_core = str(c.pace()).split('.')[0]

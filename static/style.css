@@ -1,11 +1,35 @@
 * {
 	font-family: 'Oswald', sans-serif;
-	background-color: #ccc000;
+	background-color: #74AFAD;
 	color:#000;
 }
 
+hr {
+	border:0px;
+	border-top: 2px dashed #558C89;
+}
+
+.run, .bike {
+	display:none;
+}
+
 .container {
-	margin:0px auto; width:400px; text-align:center;
+	margin:0px auto; width:620px; text-align:center;
+}
+
+.forms {
+    margin:0px auto;
+	width:390px;
+	text-align:center;
+	margin-top:20px;
+}
+
+.main {
+	outline:none;
+}
+
+.main:hover {
+	opacity: 0.8;
 }
 
 .caption {
@@ -31,14 +55,19 @@
 
 .sbmt {
 	margin-top:20px;
-	border:2px solid black;
+	border:5px solid #558C89;
 	font-size:25px;
-	background-color: #cc9000;
+	background-color: #D9853B;
 	cursor:pointer;
+	outline:none;
+}
+
+.sbmt:hover {
+	border:5px solid #436f6d;
 }
 
 .caption-json {
-	font-size:40px;
+	font-size:30px;
 	margin:0px !important;
 	padding:0px !important;
 }
