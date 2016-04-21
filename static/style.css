@@ -14,7 +14,7 @@ hr {
 }
 
 .container {
-	margin:0px auto; width:620px; text-align:center;
+	margin:0px auto; width:1000px; text-align:center;
 }
 
 .forms {
@@ -72,6 +72,10 @@ hr {
 	padding:0px !important;
 }
 
+.side {
+	font-size:14px;
+}
+
 .select-style {
     padding: 0;
     margin: 0;
@@ -102,4 +106,14 @@ hr {
 
 .select-style select:focus {
     outline: none;
+}
+
+.result-box {
+	display:none;
+	border: 1px solid #558C89;
+	float:left;
+	width:318px;
+	padding:5px;
+	margin-bottom:200px;
+	line-height:25px;
 }
