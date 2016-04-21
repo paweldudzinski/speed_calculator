@@ -70,4 +70,4 @@ def calculate_swim():
         'speed': '%.2f' % (c.speed())
     })
 
-run(host='0.0.0.', port=5070, debug=True)
+run(host='0.0.0.0', port=5070, debug=True)
