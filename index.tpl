@@ -2,7 +2,7 @@
 	<html lang="en">
 		<head>
 			<meta charset="utf-8" />
-			<title></title>
+			<title>Triathlon pace and speed calculator. Ironman calculator.</title>
 			<link href='http://fonts.googleapis.com/css?family=Oswald:400,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 			<link rel="stylesheet" href="/static/style.css" />
 			<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
