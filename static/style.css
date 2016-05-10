@@ -114,6 +114,17 @@ hr {
 	float:left;
 	width:318px;
 	padding:5px;
-	margin-bottom:200px;
+	margin-bottom:50px;
 	line-height:25px;
+}
+
+#otime {
+	display:none;
+}
+
+.footer {
+	text-align:center;
+	margin:0px auto;
+	margin-bottom:50px;
+	font-size:0.8em;
 }

@@ -109,7 +109,7 @@
 						<input class="sbmt run-sbmt" type="submit" value="Calculate how fast should i run" />
 					</form>
 				</div>
-				<br /><br /><hr /><br />
+				<br /><div id="otime">Overall time without transitions: <span id="overall">??</span></div><br /><hr /><br />
 			</div>
 			<span class="caption-json" id="title"></span><br />
 			<div id="swim-box" class="result-box">
@@ -148,6 +148,10 @@
 				</div>
 			</div>
 		</div>
+		<div style="clear:both;"></div>
+		<div class="footer">
+		Any suggestions how to improve this calculator? Please write me at paweldudzinski@gmail.com
+		</div>
 		</body>
 	</html>
 	
@@ -164,6 +168,35 @@
 	
 	<script>
 		$(document).ready(function() {
+		
+			var update_overall_time = function() {
+				var overall_secs = 0;
+				$('#otime').show();
+				var swim_time = $('#swim-time-info').html();
+				if (swim_time) {
+					overall_secs = overall_secs + parseInt(swim_time.substr(0,2)) * 3600;
+					overall_secs = overall_secs + parseInt(swim_time.substr(4,2)) * 60;
+					overall_secs = overall_secs + parseInt(swim_time.substr(8,2));
+				}
+				
+				var run_time = $('#run-time-info').html();
+				if (run_time) {
+					overall_secs = overall_secs + parseInt(run_time.substr(0,2)) * 3600;
+					overall_secs = overall_secs + parseInt(run_time.substr(4,2)) * 60;
+					overall_secs = overall_secs + parseInt(run_time.substr(8,2));
+				}
+				
+				var bike_time = $('#bike-time-info').html();
+				if (bike_time) {
+					overall_secs = overall_secs + parseInt(bike_time.substr(0,2)) * 3600;
+					overall_secs = overall_secs + parseInt(bike_time.substr(4,2)) * 60;
+					overall_secs = overall_secs + parseInt(bike_time.substr(8,2));
+				}
+				
+				$('#overall').html(overall_secs.toString().toHHMMSS());
+			}
+		
+		
 			$('.pictograms').hide();
 			
 			$('#swim-btn').click(function() {
@@ -209,6 +242,7 @@
 						$('#swim-hpace').html(hpace);
 						$('#swim-fpace').html(fpace);
 						$('#swim-box').show();
+						update_overall_time();
 					});
 				return false;
 			});
@@ -233,6 +267,7 @@
 						$('#run-dpace').html(dpace);
 						$('#run-speed').html(speed);
 						$('#run-box').show();
+						update_overall_time();
 					});
 				return false;
 			});
@@ -257,6 +292,7 @@
 						$('#bike-dpace').html(dpace);
 						$('#bike-speed').html(speed);
 						$('#bike-box').show();
+						update_overall_time();
 					});
 				return false;
 			});
