@@ -85,7 +85,7 @@
 						<select id="run-distance" name="distance">
 							<option value="5000">5 km (Sprint)</option>
 							<option value="10000">10 km (Olympic)</option>
-							<option value="21097">Half Marathon (70.2)</option>
+							<option value="21097">Half Marathon (70.3)</option>
 							<option value="42195">Marathon (IronMan)</option>
 						</select>
 						</div>
